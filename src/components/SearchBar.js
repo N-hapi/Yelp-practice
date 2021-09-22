@@ -1,5 +1,7 @@
 import React from "react";
+//search bar is imported from here
 import { StyleSheet, Text, View, TextInput } from "react-native";
+//icon
 import { Feather } from "@expo/vector-icons";
 // remeber the child always has the property input into the function
 const SearchBar = ({ term, onTermChnage, onTermSubmit }) => {
@@ -13,6 +15,7 @@ const SearchBar = ({ term, onTermChnage, onTermSubmit }) => {
 				onChangeText={(newTerm) => onTermChnage(newTerm)}
 				autoCapitalize='none'
 				autoCorrect={false}
+				//this is built in the textInput
 				onEndEditing={() => onTermSubmit()}
 				// another way to do it is to simply pass the function in without the ()
 				//!! onEndEditing={onTermSubmit}
@@ -20,7 +23,6 @@ const SearchBar = ({ term, onTermChnage, onTermSubmit }) => {
 		</View>
 	);
 };
-
 export default SearchBar;
 
 const styles = StyleSheet.create({
